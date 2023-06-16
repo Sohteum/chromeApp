@@ -8,12 +8,7 @@ function getClock() {
     clock.innerText = `${hours}:${minutes}:${seconds}`;
 }
 
-// setInterval(sayHello, 5000)
-// 5초마다 반복해서 sayHello라는 function을 실행
-
-// setTimeout(sayHello, 5000);
-// 5초 이후에 한번만 sayHello라는 function을 실행
 
 getClock();
-// 이걸 넣으면 새로고침을 하자마자 1초를 기다릴 필요 없이 바로 시계가 작동함. superCool.
+
 setInterval(getClock, 1000);

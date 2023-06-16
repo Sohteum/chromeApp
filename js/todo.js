@@ -19,7 +19,6 @@ function deleteToDo(event) {
 
 function paintToDo(newTodo) {
     const li = document.createElement("li");
-    // const 를 정의할때 li는 굳이 li로 하지 않아도 된다. 하지만 createElement의 li는 html의 li와 같은 이름을 써주어야 함. 여기서는 그냥 보기 쉽도록 li를 똑같이 사용한것.
     li.id = newTodo.id;
     const span = document.createElement("span");
     span.innerText = newTodo.text;
@@ -29,7 +28,7 @@ function paintToDo(newTodo) {
     li.appendChild(span);
     li.appendChild(button);
     toDoList.appendChild(li);
-    // append는 가장 뒤에 와야함
+    
 }
 
 function handleToDoSubmit(event) {
@@ -54,7 +53,7 @@ if (savedToDos !== null) {
     const parsedToDos = JSON.parse(savedToDos);
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
-    // =>이렇게 화살표를 사용해서 쓰는걸 애로우 펑션이라고 함
+
 }
 
 function sexyFilter() {
